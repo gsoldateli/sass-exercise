@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	&:after,
+	&:before {
+		content: "";
+		display: block;
+		top: 0;
+		left:0;
+		position: fixed;
+		bottom:0;
+		right: 0;
+		z-index: -1;  
+	}
+
+	&:before {
+		background-color: $backgroundColor;
+	}
+
+	&:after {
+		opacity: .5;
+		background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/hypnotize.png');
+	}
+}
+
+html {
+	color: $textColor;
+	position:relative;
+	font-size: $baseline;
+
+	@include respond-to(medium) {
+		font-size: $baseline * 0.8;
+	}
+}
+
+p {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+%center-block {
+	margin: 0 auto;
+	display: block;
+}
+
+.container {
+	@include clearfix();
+	max-width: $containerWidth;
+	width: 100%;
+	@extend %center-block;
+}

@@ -1,0 +1,16 @@
+@mixin clearfix() {
+	
+	&:after {
+		content: " ";
+		display:block;
+		clear:both;
+	}
+}
+
+
+
+@mixin respond-to($media) {
+  @if $media == medium {
+    @media only screen and (max-width: $break-medium) { @content; }
+  }
+}

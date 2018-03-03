@@ -1,0 +1,205 @@
+/* Media Queries */
+.vertical-list__image, .vertical-list__title-holder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.vertical-list__image {
+  object-fit: cover;
+  object-position: center; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html:after, html:before {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1; }
+html:before {
+  background-color: #926d3a; }
+html:after {
+  opacity: .5;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/hypnotize.png"); }
+
+html {
+  color: #333;
+  position: relative;
+  font-size: 16px; }
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 12.8px; } }
+
+p {
+  font-size: 1.5rem;
+  line-height: 2rem; }
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center; }
+
+.container {
+  margin: 0 auto;
+  display: block; }
+
+.container {
+  max-width: 1200px;
+  width: 100%; }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+.navigation__item {
+  display: inline-block;
+  color: #4285F4; }
+  .navigation__item:nth-child(1n + 2) {
+    color: #EA4335; }
+  .navigation__item:nth-child(2n + 3) {
+    color: #FBBC05; }
+  .navigation__item:nth-child(3n + 4) {
+    color: #4285F4; }
+  .navigation__item:nth-child(4n + 5) {
+    color: #34A853; }
+.navigation__link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+.button-back, .button-external {
+  font-size: 1.8rem;
+  padding: 1rem 1.5rem;
+  color: #333;
+  bakcground-color: #ccc;
+  transition: background .3s, border-color .3s;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.5rem; }
+
+.button-back {
+  background-color: #333;
+  color: #fff; }
+  .button-back:hover {
+    background-color: #fff;
+    border-color: #333;
+    color: #333; }
+
+.button-external {
+  background-color: #485f9b;
+  color: #fff; }
+  .button-external:hover {
+    background-color: #fff;
+    border-color: #485f9b;
+    color: #485f9b; }
+
+.page {
+  filter: drop-shadow(1px 1px 23px rgba(0, 0, 0, 0.3));
+  padding: 2rem 3rem;
+  margin-top: 2rem;
+  background-color: #fff; }
+  .page__title {
+    font-size: 4rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem; }
+    .page__title:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      width: 40%;
+      height: 2px;
+      background-color: #333;
+      margin-top: 1rem; }
+  .page__content {
+    margin-top: 2rem; }
+
+.vertical-list {
+  display: flex;
+  flex-flow: row wrap; }
+  .vertical-list__item {
+    width: 33.33%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+    cursor: pointer; }
+    @media only screen and (max-width: 768px) {
+      .vertical-list__item {
+        width: 100%;
+        height: 30vh; } }
+    .vertical-list__item--sao-paulo {
+      background-color: #304089; }
+    .vertical-list__item--rio-janeiro {
+      background-color: #284751; }
+    .vertical-list__item--porto-alegre {
+      background-color: #4a3213; }
+  .vertical-list__title-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .vertical-list__title {
+    font-size: 3rem;
+    color: #fff; }
+  .vertical-list__image {
+    transition: opacity 3s, transform 5s; }
+    .vertical-list__image:hover {
+      opacity: .3;
+      transform: scale(3) rotate(45deg); }
+
+.page-capital img {
+  max-height: 20rem;
+  width: 100%; }
+.page-capital__buttons {
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

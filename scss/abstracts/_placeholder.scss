@@ -1,0 +1,18 @@
+%shadow {
+	box-shadow: 0 4px 10px rgba(0,0,0,.5);
+}
+
+%full-content {
+	position: absolute;
+	left:0;
+	top: 0;
+	width:100%;
+	height: 100%;	
+}
+
+%full-content-image {
+	@extend %full-content;
+	object-fit: cover;
+	object-position: center;
+}
+

@@ -1,0 +1,44 @@
+.vertical-list {
+	display: flex;
+	flex-flow: row wrap;
+	&__item {
+		width: 33.33%;
+		height: 80vh;
+		position: relative;
+		overflow:hidden;
+		background-color: #333;
+		cursor: pointer;
+		@include respond-to(medium) {
+			width: 100%;
+			height: 30vh;
+		}
+		@each $city, $bgColor in (sao-paulo, #304089),
+								 (rio-janeiro, #284751),
+								 (porto-alegre, #4a3213) {
+			&--#{$city} {
+				background-color: $bgColor;
+			}
+		}
+	}
+
+	&__title-holder {
+		@extend %full-content;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__title {
+		font-size: 3rem;
+		color: #fff;
+	}
+
+	&__image {
+		@extend %full-content-image;
+		transition: opacity 3s, transform 5s;
+		&:hover {
+			opacity: .3;
+			transform: scale(3) rotate(45deg);
+		}
+	}
+}

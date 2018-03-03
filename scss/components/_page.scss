@@ -1,0 +1,30 @@
+.page {
+	filter: drop-shadow(1px 1px 23px rgba(0, 0, 0, 0.3));
+	padding: 2rem 3rem;
+	margin-top: 2rem;
+	background-color: #fff;
+
+	&__title {
+		font-size: 4rem;
+		text-align: center;
+		position: relative;
+		margin-bottom: 3rem;
+
+		&:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			left: 50%;
+			transform: translate3d(-50%,0,0);
+			width: 40%;
+			height: 2px;
+			background-color: $textColor;
+			margin-top: 1rem;
+
+		}
+	}
+
+	&__content {
+		margin-top: 2rem;
+	}
+}

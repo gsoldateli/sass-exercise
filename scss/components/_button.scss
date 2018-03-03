@@ -1,0 +1,29 @@
+%button {
+	font-size: 1.8rem;
+	padding: 1rem 1.5rem;
+	color: #333;
+	bakcground-color: #ccc;
+	transition: background .3s, border-color .3s;
+	border-radius: 6px;
+	cursor: pointer;
+	border: 4px solid transparent;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0.5rem;
+}
+
+@each $type, $color in (back, #333),
+					  (external, #485f9b) {
+	.button-#{$type} {
+		@extend %button;
+
+		background-color: $color;
+		color: #fff;
+
+		&:hover {
+			background-color: #fff;
+			border-color: $color;
+			color: $color;
+		}
+	}
+}
